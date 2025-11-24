@@ -22,7 +22,8 @@ Product B	It was awful.	Bland.
 
 # SERIES
 # A Series is a sequence of data values. If a DataFrame is a table, a Series is a list
-pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')
+pd.Series([30, 35, 40], 
+          index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')
 """
 2015 Sales    30
 2016 Sales    35
@@ -47,3 +48,6 @@ wine_reviews.head()
 # Use the first column as index
 wine_reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv", index_col=0)
 wine_reviews.head()
+
+# Save as a csv file with the name NAME.csv
+wine_reviews.to_csv("NAME.csv")
